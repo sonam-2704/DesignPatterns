@@ -19,6 +19,9 @@ public class BrowserFactory {
 
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir") + "/drivers/chromedriver.exe");
 			return new ChromeBrowser();
+			
+			default:
+				System.out.println("Invalid browser");
 
 		}
 

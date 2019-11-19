@@ -27,12 +27,12 @@ public class SingletonSerializableDemo {
 		 try
 	        { 
 	            Singleton instance1 = Singleton.instance; 
-	            ObjectOutput out = new ObjectOutputStream(new FileOutputStream("file.text")); 
+	            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("file.text")); 
 	            out.writeObject(instance1); 
 	            out.close(); 
 	      
 	            // deserailize from file to object 
-	            ObjectInput in = new ObjectInputStream(new FileInputStream("file.text")); 
+	            ObjectInputStream in = new ObjectInputStream(new FileInputStream("file.text")); 
 	              
 	            Singleton instance2 = (Singleton) in.readObject(); 
 	            in.close(); 
